@@ -1,0 +1,80 @@
+body {
+    font-family: 'Inter', sans-serif; /* Use Inter font as per instructions */
+    margin: 0; /* Tailwind handles margin/padding */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+h1 {
+    /* Styles are mostly in Tailwind in index.html */
+}
+
+.grid-container {
+    display: grid;
+    /* Responsive grid: auto-fit creates as many columns as fit, with a min of 320px for each, up to 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px; /* Gap between grid items */
+    max-width: 1200px; /* Maximum width of the grid */
+    margin: 0 auto 30px auto; /* Center the grid and add bottom margin */
+    padding: 20px; /* Padding inside the grid container */
+    /* Background, border-radius, and box-shadow are now handled by Tailwind in .grid-item */
+}
+
+.grid-item {
+    /* Tailwind classes handle most styling for .grid-item in script.js */
+    width: 350px; /* Fixed width for grid items */
+    justify-self: center; /* Center items within the grid columns */
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    /* Styles for h3 inside grid item are mostly in Tailwind in script.js */
+}
+
+.grid-item p {
+    /* Styles for p inside grid item are mostly in Tailwind in script.js */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    /* Styles are mostly in Tailwind in script.js */
+}
+
+/* Lightbox Modal Styles */
+/* These styles are for the modal and its content */
+#articleModal {
+    /* Already styled with Tailwind in index.html for fixed, inset, bg-black, etc. */
+}
+
+.modal-content {
+    /* Already styled with Tailwind in index.html for bg-white, p-6, rounded-lg, etc. */
+}
+
+/* Loading Indicator Styles */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Ensure it takes up some space even before content loads */
+    margin: 50px auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

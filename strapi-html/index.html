@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strapi Content Grid</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter">
+    <h1 class="text-4xl font-bold text-center text-gray-800 my-8">Our Awesome Content</h1>
+
+    <!-- Error Message Display -->
+    <div id="errorMessage" class="text-red-600 text-center mt-4 hidden"></div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p class="text-gray-600 mt-4">Loading content...</p>
+    </div>
+
+    <div class="grid-container" id="contentGrid">
+        </div>
+
+    <div class="pagination" id="paginationControls">
+        </div>
+
+    <!-- Lightbox Modal Structure -->
+    <div id="articleModal" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50 hidden">
+        <div class="modal-content bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+            <h2 id="modalTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+            <img id="modalImage" class="w-full h-auto object-cover rounded-md mb-4 hidden" alt="Article Image">
+            <div id="modalContent" class="prose max-w-none text-gray-700"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
